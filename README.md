@@ -1,8 +1,10 @@
-# python-flask
-Test d'un chaîne CI/CD
+# Project
+Test CI/CD :
+- GitHub
+- Jenkins
 
-# requirements
-Paquets nécessaires
+# Requirements
+Packages :
 ```
 pip install flask
 pip install Flask-Script
