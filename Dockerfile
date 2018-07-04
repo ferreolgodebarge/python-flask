@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 MAINTAINER Ferreol
 RUN apt-get update
-RUN apt-get install -y python-dev
+RUN apt-get install -y python-dev build-essential
 RUN apt-get install -y python-pip
 COPY . /app
 WORKDIR /app
