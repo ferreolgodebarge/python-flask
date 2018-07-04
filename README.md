@@ -1,6 +1,6 @@
 # Project
 Test CI/CD :
-- GitHub
+- Git/GitHub
 - Jenkins
 
 # Requirements
