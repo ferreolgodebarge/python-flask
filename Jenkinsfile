@@ -7,7 +7,7 @@ node {
 
         stage ('Build image'){
                 steps{
-                        sh 'sudo docker build -t flask-jenkins:v1.03 .'
+                        bash 'sudo docker build -t flask-jenkins:v1.03 .'
                 }
         }
 }
