@@ -1,11 +1,14 @@
 node {
-	def app
+        def app
 
-	stage('Clone repository'){
-		checkout scm
-	}
+        stage('Clone repository'){
+                checkout scm
+        }
 
-	stage ('Build image'){
-		app = docker.build("python-app-jenkins")
-	}
+        stage ('Build image'){
+                steps{
+                        sh 'sudo docker build -t flask-jenkins:v1.03 .'
+                }
+        }
 }
+
