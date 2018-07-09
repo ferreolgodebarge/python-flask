@@ -33,13 +33,13 @@ pipeline {
 
 		stage ('Build image'){
 			steps{
-				sh 'sudo docker build --label flask-jenkins -t flask-jenkins:latest .'
+				sh 'sudo docker build --label app=flask-jenkins -t flask-jenkins:latest .'
         		}
 		}
         	
 		stage ('Deploy image'){
 			steps{
-				sh 'sudo docker run -d -p 5000:5000 -h 0.0.0.0 -l flask-jenkins flask-jenkins:latest'
+				sh 'sudo docker run -d -p 5000:5000 -h 0.0.0.0 -l app=flask-jenkins flask-jenkins:latest'
 			}
 		}
 	}
