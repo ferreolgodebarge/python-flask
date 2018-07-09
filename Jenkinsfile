@@ -17,7 +17,6 @@ pipeline {
 			}
 			catch (exc){
 				echo 'delete container failed'
-				throw
 			}
 		}
 
@@ -29,7 +28,6 @@ pipeline {
 			}
 			catch (exc){
 				echo 'delete image failed' 
-				throw
 			}
 		}
 
