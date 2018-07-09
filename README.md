@@ -77,4 +77,7 @@ Creation of a project pipeline, checking the SCM.
 		- Docker image : citizenstig/jenkins-slave-python 
 This section is to use Docker Host API when building an image in a dockerized jenkins slave.
 
-Jenkins-slave used.
+Sources :
+- https://devopscube.com/docker-containers-as-build-slaves-jenkins
+- https://blog.nimbleci.com/2016/08/31/how-to-build-docker-images-automatically-with-jenkins-pipeline
+- https://getintodevops.com/blog/building-your-first-docker-image-with-jenkins-2-guide-for-developers
