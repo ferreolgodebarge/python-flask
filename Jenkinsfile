@@ -9,12 +9,6 @@ pipeline {
         		}
 		}
 
-		stage ('Remove latest image'){
-			steps{
-				sh 'sudo docker rmi $(sudo docker images -q flask-jenkins)'
-			}
-		}
-        	
 		stage ('Build image'){
 			steps{
 				sh 'sudo docker build -t flask-jenkins:latest .'
