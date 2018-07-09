@@ -9,27 +9,26 @@ pipeline {
         		}
 		}
 		
-		stage ('delete previous container'){
-			steps{
-				try{
+		try{
+			stage ('delete previous container'){
+				steps{
 					sh 'sudo docker rm -f $(sudo docker ps -f label=flask-jenkins)'
-				}
-			
-				catch (exc){
-					echo 'delete container failed'
 				}
 			}
 		}
+		catch (exc){
+			echo 'delete container failed'
+		}
 
-		stage ('delete previous image'){
-			steps{
-				try{	
+		try{	
+			stage ('delete previous image'){
+				steps{
 					sh 'sudo docker rmi $(sudo docker images -q flask-jenkins)'
 				}
-				catch (exc){
-					echo 'delete image failed' 
-				}
 			}
+		}
+		catch (exc){
+			echo 'delete image failed' 
 		}
 
 		stage ('Build image'){
