@@ -9,7 +9,7 @@ pipeline {
         		}
 		}
 		
-		stage ('delete previous image'){
+		stage ('delete previous container'){
 			try{
 				steps{
 					sh 'sudo docker rm -f $(sudo docker ps -f label=flask-jenkins)'
