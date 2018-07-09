@@ -17,7 +17,7 @@ pipeline {
         	
 		stage ('Deploy image'){
 			steps{
-				sh 'sudo docker run -p 5000:5000 -h 0.0.0.0 flask-jenkins:latest'
+				sh 'sudo docker run -d -p 5000:5000 -h 0.0.0.0 flask-jenkins:latest'
 			}
 		}
 	}

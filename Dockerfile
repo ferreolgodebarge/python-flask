@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER Ferreol
 RUN apt-get update -y
-RUN apt-get install -y python-dev build-essential python-pip 
+RUN apt-get install -y python-dev build-essential python-pip
 COPY app.py /app/
 COPY templates /app/templates/
 WORKDIR /app
