@@ -1,12 +1,20 @@
-node {
+pipeline {
+
+	agent any
+
 	stages{
         	stage('Clone repository'){
-                	checkout scm
-        	}
+                	steps{
+				checkout scm
+        		}
+		}
 
         	stage ('Build image'){
-                	bash 'sudo docker build -t flask-jenkins:v1.03 .'
-        	}
+                	
+			steps{
+				bash 'sudo docker build -t flask-jenkins:v1.03 .'
+        		}
+		}
         }
 }
 
