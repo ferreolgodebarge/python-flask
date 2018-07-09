@@ -23,7 +23,7 @@ pipeline {
 		stage ('delete previous image'){
 			try{	
 				steps{
-					sh 'sudo docker rmi $(sudo docker images -q flask-jenkins')
+					sh 'sudo docker rmi $(sudo docker images -q flask-jenkins)'
 				}
 			}
 			catch (exc){
