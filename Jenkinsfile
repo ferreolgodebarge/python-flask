@@ -13,7 +13,7 @@ pipeline {
 			steps{
 				script{
 					try{
-						sh 'sudo docker rm -f $(sudo docker ps -f label=flask-jenkins)'
+						sh 'sudo docker rm -f $(sudo docker ps -q --filter "label=app=flask-jenkins")'
 					}
 					catch (exc){}
 				}
@@ -24,7 +24,7 @@ pipeline {
 			steps{
 				script{
 					try{	
-						sh 'sudo docker rmi $(sudo docker images -q flask-jenkins)'
+						sh 'sudo docker rmi $(sudo docker images -q --filter "label=app=flask-jenkins")'
 					}
 					catch (exc){}
 				}
