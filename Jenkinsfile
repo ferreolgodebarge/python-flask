@@ -15,6 +15,10 @@ pipeline {
 					sh 'sudo docker rm -f $(sudo docker ps -f label=flask-jenkins)'
 				}
 			}
+			catch (exc){
+				echo 'delete container failed'
+				throw
+			}
 		}
 
 		stage ('delete previous image'){
