@@ -12,7 +12,7 @@ pipeline {
         	stage ('Build image'){
                 	
 			steps{
-				bash 'sudo docker build -t flask-jenkins:v1.03 .'
+				sh 'sudo docker build -t flask-jenkins:v1.03 .'
         		}
 		}
         }
