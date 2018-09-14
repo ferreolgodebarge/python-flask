@@ -7,7 +7,7 @@ manager = Manager(app)
 
 @app.route('/')
 def home():
-    # Basic page
+    # Basic page2
     return render_template('hello.html')
 
 @app.route('/2')
